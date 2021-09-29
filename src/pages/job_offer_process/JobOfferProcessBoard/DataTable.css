@@ -1,0 +1,181 @@
+.ant-table-wrapper {
+    border-radius: 0.5rem;
+}
+
+th.ant-table-cell {
+    background-color: #edf1f8 !important;
+    font-family: Bold !important;
+}
+
+tr {
+    font-family: Regular !important;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8 !important;
+}
+
+td:last-child {
+    color: #5685ee;
+    font-size: 2rem !important;
+    font-family: Bold;
+}
+
+.ant-pagination-item {
+    border: none !important;
+    font-family: Regular !important;
+}
+
+.ant-pagination-item-active a {
+    background-color: #5685ee;
+    color: white !important;
+    border-radius: 0.5rem;
+}
+
+.ant-pagination-item-link {
+    border: none !important;
+}
+
+.ant-pagination-item-link span svg {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.ant-table-column-sorters {
+    direction: rtl !important;
+}
+
+.ant-table-column-sorter-full {
+    padding-right: 1rem !important;
+}
+
+.ant-table .ant-table-small .ant-table-filter-column-title {
+    padding: 0 !important;
+}
+
+.ant-table-wrapper-rtl .ant-table-column-sorter {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+.ant-table-filter-column-title:hover {
+    background-color: rgb(225, 233, 245) !important;
+}
+
+.ant-table-filter-trigger {
+    margin-right: 0rem !important;
+}
+
+.ant-input-rtl {
+    direction: ltr !important;
+}
+
+.ant-table.ant-table-small .ant-table-thead .ant-table-filter-column-title {
+     padding: 8px 0em 8px 8px !important;
+}
+
+.ant-table.ant-table-small .ant-table-thead .ant-table-filter-column-title {
+     padding: 8px 0em 8px 8px !important;
+}
+
+.ant-table-wrapper-rtl .ant-table-filter-column-title {
+     padding: 16px 16px 16px 2.3em !important;
+}
+
+.ant-tag {
+    border-radius: 0.5rem !important;
+}
+
+.volunteer {
+    color: #5685ee;
+    background-color: #e3eeff;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 0.5rem;
+    font-family: Bold;
+}
+
+#search_button span {
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+    padding-right: 0rem !important;
+}
+
+#search_button svg {
+    margin-left: 1rem !important;
+    margin-bottom: 0.3rem !important;
+}
+
+.anticon-search {
+    margin: 0 !important;
+}
+
+#search_button_delete {
+    font-size: 1.2rem !important;
+    text-align: center !important;
+    padding-right: 1.8rem !important;
+    border: 1px solid #f87171 !important;
+    color: #f87171 !important;
+    background-color: white !important;
+}
+
+#search_button_delete:hover {
+    background-color: #f87171 !important;
+    color: white !important;
+}
+
+.ant-table-filter-dropdown {
+    font-family: Medium !important;
+}
+
+li.ant-dropdown-menu-item {
+    font-size: 1.3rem !important;
+}
+
+.ant-table-filter-dropdown .ant-btn-link {
+    padding-right: 0.75rem !important;
+    background-color: white !important;
+    border: 1px solid #f87171 !important;
+    color: #f87171 !important;
+}
+
+.ant-table-filter-dropdown .ant-btn-link:hover {
+    background-color: #f87171 !important;
+    color: white !important;
+}
+
+.ant-table-filter-dropdown .ant-btn-link span {
+    display: none;
+}
+
+.ant-table-filter-dropdown .ant-btn-link:after {
+    content: 'پاک کردن';
+    font-family: Medium;
+    font-size: 1.2rem !important;
+}
+
+.ant-table-filter-dropdown .ant-btn-primary span {
+    display: none;
+}
+
+.ant-table-filter-dropdown .ant-btn-primary:after {
+    content: 'اعمال';
+    font-family: Medium;
+    font-size: 1.2rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+
+ul a {
+    font-family: Medium;
+}
+.headerDrawer{
+    font-family: ExtraBold !important;
+    font-size: 16px !important;
+}
+.ant-tabs-ink-bar
+{
+   
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__Group_83" width="23" height="17" data-name="Group 83" viewBox="0 0 23 17">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#2a2d44}
+        </style>
+    </defs>
+    <rect id="prefix__Rectangle_50" width="23" height="3" class="prefix__cls-1" data-name="Rectangle 50" rx="1.5"/>
+    <rect id="prefix__Rectangle_51" width="23" height="3" class="prefix__cls-1" data-name="Rectangle 51" rx="1.5" transform="translate(0 7)"/>
+    <rect id="prefix__Rectangle_52" width="23" height="3" class="prefix__cls-1" data-name="Rectangle 52" rx="1.5" transform="translate(0 14)"/>
+</svg>

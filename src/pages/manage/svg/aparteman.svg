@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104">
+    <defs>
+        <style>
+            .cls-4{fill:none}.cls-2{fill:#ccc}.cls-4{stroke:#ccc;stroke-linecap:round;stroke-width:3px}
+        </style>
+    </defs>
+    <g id="Group_821" transform="translate(-735 -428)">
+        <g id="apartment-24px" transform="translate(735 428)">
+            <g id="Group_751">
+                <path id="Rectangle_610" fill="none" d="M0 0H104V104H0z"/>
+            </g>
+            <g id="Group_752" transform="translate(12.942 13.061)">
+                <path id="Path_412" d="M63.394 37.511V3H20.256v17.256H3V80.65h34.511V63.394h8.628V80.65H80.65V37.511zM20.256 72.022h-8.628v-8.628h8.628zm0-17.256h-8.628v-8.627h8.628zm0-17.256h-8.628v-8.627h8.628zm17.255 17.257h-8.628v-8.628h8.628zm0-17.256h-8.628v-8.628h8.628zm0-17.256h-8.628v-8.627h8.628zm17.256 34.512h-8.628v-8.628h8.628zm0-17.256h-8.628v-8.628h8.628zm0-17.256h-8.628v-8.627h8.628zm17.255 51.767h-8.628v-8.628h8.628zm0-17.256h-8.628v-8.627h8.628z" class="cls-2" transform="translate(-3 -3)"/>
+            </g>
+        </g>
+        <circle id="Ellipse_190" cx="15.5" cy="15.5" r="15.5" fill="#fff" transform="translate(806 493)"/>
+        <g id="Group_370" transform="translate(809.516 496.135)">
+            <g id="search_1_">
+                <path id="Path_180" d="M25.239 38.979a13.739 13.739 0 1 1 13.74-13.74 13.754 13.754 0 0 1-13.74 13.74zm0-22.245a8.505 8.505 0 1 0 8.505 8.505 8.515 8.515 0 0 0-8.505-8.505z" class="cls-2" transform="translate(-11.5 -11.5)"/>
+            </g>
+            <path id="Line_81" d="M0 0L0 6.75" class="cls-4" transform="translate(13.721 10.675)"/>
+            <path id="Line_82" d="M6.75 0L0 0" class="cls-4" transform="translate(10.346 14.05)"/>
+        </g>
+    </g>
+</svg>

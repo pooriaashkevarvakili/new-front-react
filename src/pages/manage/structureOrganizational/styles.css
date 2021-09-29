@@ -1,0 +1,82 @@
+/* ---------------------------------- HACOUPIAN 360  ---------------------------------- *
+- Author(s): AraNote
+- Date Created: 1399/08/21-16:53
+- ------------------------------------------------------------------------------------ *
+- This file is bloc of job offer module.
+- All of the Application manage by this .
+- original
+- ----------------------------------------------------------------------------------- */
+.orgchart.myChart > ul > li > ul li::before {
+  border-top-color: #215a88;
+}
+
+.orgchart.myChart > ul > li > ul li .oc-node::before,
+.orgchart.myChart ul li .oc-node:not(:only-child)::after {
+  background-color: #215a88;
+}
+
+.orgchart.myChart .oc-node .position {
+  box-sizing: border-box;
+
+  background-color: #ffebed;
+  color: #363636;
+  width: 210px;
+  height: 50px;
+  padding: 2px;
+}
+
+.orgchart.myChart .oc-node{
+  box-sizing: border-box;
+  color: #215a88;
+  background-color: #fff;
+
+}
+
+.position{
+  font-family:yek;
+  font-size:15px;
+}
+.orgchart-container{
+  border:none;
+  margin-right:110px;
+  height:500px;
+
+}
+.bg-white{
+  width:500px;
+}
+
+.orgchart{
+background-size:auto;
+  background-image: none;
+  width:200%;
+
+}
+.myChart{
+  border:none;
+
+
+}
+.orgchart-container{
+width:200%;
+
+}
+.orgchart .myChart{
+  width:300px;
+}
+.orgchart > ul > li > ul li::before{
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid rgba(217, 83, 79, 0.8);
+  box-sizing: border-box;
+}
+
+.orgchart.myChart .oc-node .fullname {
+
+  color: #215a88;
+  background-color: #fff;
+}
+

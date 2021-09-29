@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.506" height="17" viewBox="0 0 21.506 17">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__Group_434" data-name="Group 434" transform="translate(-145.494 -224)">
+        <g id="prefix__add_1_" data-name="add (1)" transform="translate(140.527 160)">
+            <g id="prefix__Group_433" data-name="Group 433" transform="translate(4.967 64)">
+                <g id="prefix__Group_432" data-name="Group 432">
+                    <path id="prefix__Path_268" d="M135.174 277.333c-2.39 0-7.174 1.2-7.174 3.587v1.794h14.349v-1.794c0-2.39-4.785-3.587-7.175-3.587z" class="prefix__cls-1" data-name="Path 268" transform="translate(-128 -268.365)"/>
+                    <path id="prefix__Path_269" d="M216.921 71.174a3.587 3.587 0 1 0-3.587-3.587 3.589 3.589 0 0 0 3.587 3.587z" class="prefix__cls-1" data-name="Path 269" transform="translate(-209.747 -64)"/>
+                </g>
+            </g>
+        </g>
+        <circle id="prefix__Ellipse_102" cx="6" cy="6" r="6" fill="#f87171" data-name="Ellipse 102" transform="translate(155 229)"/>
+        <path id="prefix__Path_270" d="M7.553 130.832H4.72V128H2.832v2.832H0v1.888h2.832v2.832H4.72v-2.832h2.833z" class="prefix__cls-1" data-name="Path 270" transform="translate(157.447 103.54)"/>
+    </g>
+</svg>

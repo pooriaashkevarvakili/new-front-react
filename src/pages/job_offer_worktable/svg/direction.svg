@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="direction" width="11.445" height="11.445" viewBox="0 0 11.445 11.445">
+    <defs>
+        <style>
+            .cls-1{fill:#5685ee}
+        </style>
+    </defs>
+    <g id="Group_214" data-name="Group 214" transform="translate(0 6.997)">
+        <g id="Group_213" data-name="Group 213">
+            <path id="Path_88" d="M10.551 313v3.107a.448.448 0 0 1-.447.447H1.341a.448.448 0 0 1-.447-.447V313H0v3.107a1.343 1.343 0 0 0 1.341 1.341H10.1a1.343 1.343 0 0 0 1.341-1.341V313z" class="cls-1" data-name="Path 88" transform="translate(0 -313)"/>
+        </g>
+    </g>
+    <g id="Group_216" data-name="Group 216" transform="translate(2.944)">
+        <g id="Group_215" data-name="Group 215">
+            <path id="Path_89" d="M136.64 5.269l-1.7 1.7V0h-.894v6.968l-1.7-1.7-.632.632 2.778 2.778 2.781-2.778z" class="cls-1" data-name="Path 89" transform="translate(-131.716)"/>
+        </g>
+    </g>
+</svg>

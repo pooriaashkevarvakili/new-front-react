@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.967" height="108" viewBox="0 0 86.967 108">
+    <defs>
+        <linearGradient id="zt9o9v9aga" x1=".5" x2=".5" y1="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fd3a84"/>
+            <stop offset="1" stop-color="#ffa68d"/>
+        </linearGradient>
+        <linearGradient id="evcihw5wob" x1=".5" x2=".5" y1="1" y2="-.131" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ffe2e6"/>
+            <stop offset="1" stop-color="#ffb9c4"/>
+        </linearGradient>
+    </defs>
+    <g>
+        <g>
+            <path fill="url(#zt9o9v9aga)" d="M111.868 120h-52.18L45 131.982l1.739 34.787 30.342 5.6 6.184 6.571h5.218l5.991-6.571h31.888a2.9 2.9 0 0 0 2.9-2.9v-32.076A17.412 17.412 0 0 0 111.868 120z" transform="translate(2.706 23.191) translate(-45 -120)"/>
+        </g>
+    </g>
+    <g>
+        <g>
+            <path fill="url(#evcihw5wob)" d="M65.789 105.1a2.9 2.9 0 0 0 2.9 2.9h11.6a2.9 2.9 0 0 0 2.9-2.9V75.563H65.787zM91.877 0H74.483a2.9 2.9 0 0 0-2.9 2.9v34.786a2.9 2.9 0 0 0 5.8 0V17.393h14.494a2.9 2.9 0 0 0 2.9-2.9V2.9a2.9 2.9 0 0 0-2.9-2.9zM48.393 23.191h-.172A17.537 17.537 0 0 0 31 40.807v31.859a2.9 2.9 0 0 0 2.9 2.9h31.887V40.585a17.413 17.413 0 0 0-17.394-17.394zm2.9 40.778h-5.8a2.9 2.9 0 1 1 0-5.8h5.8a2.9 2.9 0 1 1 0 5.8z" transform="translate(-31)"/>
+        </g>
+    </g>
+</svg>

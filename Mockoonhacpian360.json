@@ -1,0 +1,1030 @@
+{
+  "source": "mockoon:1.11.0",
+  "data": [
+    {
+      "type": "environment",
+      "item": {
+        "uuid": "",
+        "lastMigration": 13,
+        "name": "Demo API",
+        "endpointPrefix": "",
+        "latency": 0,
+        "port": 3005,
+        "routes": [
+          {
+            "uuid": "",
+            "documentation": "Use multiple responses with rules",
+            "method": "post",
+            "endpoint": "content/:param1",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\n  \"Rules example\": \"Default response. Served if route param 'param1' is not present.\"\n}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "Default response",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              },
+              {
+                "uuid": "",
+                "body": "{\n  \"Rules example\": \"Content XYZ. Served if route param 'param1' equals 'xyz'. (See in 'Rules' tab)\"\n}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "Content XYZ",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [
+                  {
+                    "target": "params",
+                    "modifier": "param1",
+                    "value": "xyz",
+                    "isRegex": false
+                  }
+                ],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              },
+              {
+                "uuid": "",
+                "body": "{\n  \"Rules example\": \"Content not found. Served if route param 'param1' is not equal to 'xyz'. (See in 'Rules' tab)\"\n}\n",
+                "latency": 0,
+                "statusCode": 404,
+                "label": "Content not found",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [
+                  {
+                    "target": "params",
+                    "modifier": "param1",
+                    "value": "^(?!.*xyz).*$",
+                    "isRegex": true
+                  }
+                ],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "Serve a file dynamically depending on the path param 'pageName'.",
+            "method": "get",
+            "endpoint": "file/:pageName",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "Templating is also supported in file path",
+                "headers": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/html"
+                  }
+                ],
+                "filePath": "./page{{urlParam 'pageName'}}.html",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "Path supports various patterns",
+            "method": "put",
+            "endpoint": "path/with/pattern(s)?/*",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "The current path will match the following routes: \nhttp://localhost:3000/path/with/pattern/\nhttp://localhost:3000/path/with/patterns/\nhttp://localhost:3000/path/with/patterns/anything-else\n\nLearn more about Mockoon's routing: https://mockoon.com/docs/latest/routing",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/plain"
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/getAllData",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"sex\":1,\"job_title_id\":1,\"job_location_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"send_date\":\"990617\",\"send_location_id\":1,\"email\":\"zadfathollah@gmail.com\"}]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/getAllResume",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\r\n  \"id\":1,\"full_name\":\"ناهیدزادفتح اله\",\"job_title\":\"it\",\"send_location\":\"daftar\",\"send_date\" :\"990631\",\"condition\":\"استخدام شده\"\r\n  },\r\n  {\r\n  \"id\":2,\"full_name\":\"مجید زادقتح اله\",\"job_title\":\"it\",\"send_location\":\"daftar\",\"send_date\" : \"990701\",\"condition\":\"استخدام شده\"\r\n  }\r\n  ]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "Can Mockoon forward or record entering requests?",
+            "method": "get",
+            "endpoint": "forward-and-record",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "Mockoon can also act as a proxy and forward all entering requests that are not caught by declared routes. \nYou can activate this option in the environment settings ('cog' icon in the upper right corner). \nTo learn more: https://mockoon.com/docs/latest/proxy-mode\n\nAs always, all entering requests, and responses from the proxied server will be recorded ('clock' icon in the upper right corner).\nTo learn more: https://mockoon.com/docs/latest/requests-logging",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/plain"
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/getForDropDown",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\r\n\"job_title\":[{\"id\":1,\"name\":\"dveloper\"},{\"id\":2,\"name\":\"mali\"}],\r\n\"send_location\":[{\"id\":1,\"name\":\"site\"},{\"id\":2,\"name\":\"advertisement\"}],\r\n\"educations\":[{\"id\":1,\"name\":\"BS\"},{\"id\":2,\"name\":\"MS\"}],\r\n\"skills\":[{\"id\":1,\"name\":\"Office\"}]\r\n}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/getAllApplicant",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":2},\r\n{\"id\":2,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"محید\",\"lname\":\"زادفتح اله\",\"senddate\":\"980617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":1},\r\n{\"id\":3,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":3},\r\n{\"id\":4,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":4},\r\n{\"id\":5,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":5}\r\n,{\"id\":6,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"950617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":1}\r\n,{\"id\":7,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"مهدی\",\"lname\":\"زادفتح اله\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":2}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/getAllEvaluateForSingleApplicant",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\r\n[{\"id\":1,\"applicant_id\":1,\"requirement_id\":1,\"recruiment_status_id\":1 ,\"comment\":\"ـایید\",\"score\":\"100\",\"agreement_salary\":\"50000000\",\"start_date_work\":\"990617\",\"descreption\":\"تایید\"}\r\n,\r\n{\"id\":2,\"Tbl_applicant_id\":1,\"Tbl_Recruiment_id\":1,\"recruiment_status_id\":1 ,\"comment\":\"ـایید\",\"score\":\"100\",\"agreement_salary\":\"50000000\",\"start_date_work\":\"990617\",\"descreption\":\"تایید\"}\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/FormTabpane",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\r\n\"educations\":[{\"id\":1,\"name\":\"BS\"},{\"id\":2,\"name\":\"MS\"}],\r\n\"skills\":[{\"id\":1,\"name\":\"Office\"},{\"id\":2,\"name\":\"word\"}]\r\n}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/recentActivesImg",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/addResume",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/conformationForInterView",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"department_id\":1,\"color\":\"#fff2e8\",\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"#ff9d55\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"اول\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":2},\r\n{\"id\":2,\"department_id\":1,\"color\":\"#e8f1ff\",\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"#5685ee\",\"fname\":\"محید\",\"lname\":\"زادفتح اله\",\"senddate\":\"دوم\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":1},\r\n{\"id\":3,\"color\":\"#f4f4f4\",\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"#b9b9b9\",\"fname\":\"ناهید\",\"lname\":\"زادفتح اله\",\"senddate\":\"سوم\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":3}\r\n\r\n\r\n]\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/interview",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"department_id\":1,\"jobTitle_id\":1,\"color\":\"#fff2e8\",\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زاد\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":2},\r\n{\"id\":2,\"department_id\":1,\"jobTitle_id\":1,\"color\":\"#e8f1ff\",\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"محید\",\"lname\":\"زاد\",\"senddate\":\"980617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"تایید\",\"status_id\":1},\r\n{\"id\":3,\"department_id\":1,\"jobTitle_id\":1,\"color\":\"#f4f4f4\",\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زاد\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"ردشده\",\"status_id\":3},\r\n{\"id\":3,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زاد\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":3}\r\n\r\n]\r\n\r\n",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/completionofdocuments",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زاد\",\"senddate\":\"990617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":2},\r\n{\"id\":2,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"محید\",\"lname\":\"زاد\",\"senddate\":\"980617\",\"sendLocation_id\":1,\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"تایید\",\"status_id\":1}\r\n\r\n\r\n\r\n]\r\n",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/recruitment",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"ناهید\",\"lname\":\"زاد\",\"senddate\":\"990617\",\"sendLocation_id\":\"\",\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"استخدام\",\"status_id\":2},\r\n{\"id\":2,\"department_id\":1,\"jobTitle_id\":1,\"jobLocation_id\":1,\"image\":\"https://picsum.photos/200/300\" ,\"resume\":\"null\",\"fname\":\"محید\",\"lname\":\"زاد\",\"senddate\":\"980617\",\"sendLocation_id\":\"\",\"email\":\"zadfathollah@gmail.com\"\r\n,\"mobile\":\"091021175\",\"age\":\"30\",\"education_id\":1,\"jobskill_id\":1,\"description\":\"تایید\",\"status_id\":1}\r\n\r\n\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api/addCategories",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\"id\":1,\"red\":\"#ff655f\",\"orange\":\"#ff9055\",\"yellow\":\"#ffcb55\",\"green\":\"#58f2a5\" ,\"palegreen\":\"#56e6db\",\"PaleBlue\":\"#55deff\",\"blue\":\"#559dff\",\"pink\":\"#665beb\",\"purple\":\"#b656e8\",\"email\":\"zadfathollah@gmail.com\"}]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "post",
+            "endpoint": "api/login",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\n  \"id\":1,\n  \"token\":\"asasasasasas\",\n  \"avatar\":\"https://www.oskproperty.com.my/wp-content/uploads/2015/11/testimonial-3.jpg\",\n  \"name\":\"Ahmadreza\",\n  \"mobile\":\"5522555\",\n  \"email\":\"ar.azizan@gmail.com\"\n}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[{\r\n\t\t\"id\": 11,\r\n\t\t\"title\": \"امروزچهارشنبه\",\r\n\t\t\"image\":\"http://localhost/360/img/svg/10.svg\",\r\n\t\t\"api\": \"dashboard/widgets/today\",\r\n\t\t\"type\": \"Tiny\",\r\n\t\t\"color\": \"#f87171\"\r\n\t},\r\n\r\n\t{\r\n\t\t\"id\": 22,\r\n\t\t\"image\":\"http://localhost/360/img/svg/2.svg\",\r\n\t\t\"title\": \"ساعت ورود\",\r\n\t\t\"api\": \"dashboard/widgets/entrance\",\r\n\t\t\"type\": \"Tiny\",\r\n\t\t\"color\": \"#5685ee\"\r\n\t},\r\n\t{\r\n\t\t\"id\": 33,\r\n\t\t\"image\":\"http://localhost/360/img/svg/9.svg\",\r\n\t\t\"title\": \"مانده مرخصی\",\r\n\t\t\"api\": \"dashboard/get-leave\",\r\n\t\t\"type\": \"Tiny\",\r\n\t\t\"color\": \"#ff9d55\"\r\n\t},\r\n\t{\r\n\t\t\"id\": 44,\r\n\t\t\"title\": \"درصد پیشرفت تسک ها\",\r\n\t\t\"image\":\"http://localhost/360/img/svg/3.svg\",\r\n\t\t\"api\": \"dashboard/widgets/LastTask\",\r\n\t\t\"type\": \"Tiny\",\r\n\t\t\"color\": \"#1eb977\"\r\n\r\n\t},\r\n\t{\r\n\t  \"id\":55,\r\n\t  \"type\":\"Tiny\",\r\n\t  \"image\":\"https://s16.picofile.com/file/8419417176/bar_chart_24px_3x.png\"\r\n\t\r\n\t},\r\n\t{\r\n\t  \"id\":66,\r\n\t  \"header\":\"آخرین کارها\",\r\n\t    \"type\":\"LastTask\",\r\n\t  \"api\":\"dashboard/widgets/finalJob\",\r\n\t  \t  \"button\":\"مشاهده همه\",\r\n\t  \"buttonBackground\":\"#eff4ff\",\r\n\t  \"buttonColor\":\"#5685ee\"\r\n\t \t\r\n\t  \r\n\t},\r\n\t{\r\n\t  \t  \"id\":77,\r\n\t  \t  \"header\":\"آخرین اعلان ها\",\r\n\t  \"type\":\"LastActivity\",\r\n\t  \"api\":\"dashboard/widgets/lastActivity\",\r\n\t  \"button\":\"مشاهده همه\",\r\n\t  \"buttonBackground\":\"#eff4ff\",\r\n\t  \"buttonColor\":\"#5685ee\"\r\n       \r\n\r\n\r\n\t},\r\n\t\t{\r\n\t  \"id\":109,\r\n\t  \"header\":\"پروژه هاکوپیان 360\",\r\n\t    \"type\":\"LastProject\",\r\n\t  \"api\":\"dashboard/widgets/lastProject\"\r\n\t},\r\n\t{\r\n\t  \"id\":119,\r\n\t \"header\":\"انتخاب غذا\",\r\n\t \"type\":\"LastFood\",\r\n\t \"api\":\"dashboard/widgets/lastFood\",  \r\n\t \"button\":\"رزروناهارفردا\",\r\n\t  \"buttonBackground\":\"#eff4ff\",\r\n\t  \"buttonColor\":\"#5685ee\"\r\n\t},\r\n\t{\r\n\t  \"id\":99,\r\n\t  \"type\":\"LastProfile\",\r\n\t  \"api\":\"dashboard/widgets/LastProfile\"\r\n\t},\r\n\t{\r\n\t  \"id\":88,\r\n\t  \"header\":\"تولدهای امروز\",\r\n\t  \"type\":\"Birthday\",\r\n\t  \"api\":\"dashboard/widgets/get-birthday\"\r\n\t}\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/today",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\"چهارشنبه 25 آبان 1399\"",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/entrance",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\"8:25\"",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/my",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\n      {\n        \"id\": 11,\n        \"col\": 1,\n        \"pos\": 1\n      },\n      \n      {\n        \"id\": 22,\n        \"col\": 2,\n        \"pos\": 0\n      },\n      {\n        \"id\": 33,\n        \"col\": 3,\n        \"pos\": 1\n      },\n         {\n        \"id\": 44,\n        \"col\": 4,\n        \"pos\": 1\n      },\n      \n      {\n        \"id\": 77,\n        \"col\": 3,\n        \"pos\": 1\n      },\n        {\n        \"id\": 88,\n        \"col\": 4,\n        \"pos\": 1\n      },\n      {\n        \"id\":66,\n        \"col\":2,\n        \"pos\":2\n      },\n      {\n        \"id\":99,\n        \"col\":1,\n        \"pos\":1\n      },\n      {\n        \"id\":109,\n        \"col\":1,\n        \"pos\":1\n      },\n      {\n        \"id\":119,\n        \"col\":4,\n        \"pos\":4\n      }\n        \n]\n      \n",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/get-widget-value/{id}",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "{\n  date:\"\"\n}",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/get-leave",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\"8روز\"",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/get-task",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\"85%\"",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/get-birthday",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\n \n  {\n    \"id\":1,\n    \"name\":\"علیرضا تهرانی\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n    \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n  {\n    \"id\":2,\n    \"name\":\"رویا محمدی زاده\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n  {\n    \"id\":3,\n    \"name\":\"علیرضا تهرانی\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n  {\n    \"id\":4,\n    \"name\":\"علیرضا تهرانی\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n  {\n    \"id\":5,\n    \"name\":\"علیرضا تهرانی\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n  {\n    \"id\":6,\n    \"name\":\"علیرضا تهرانی\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n  {\n    \"id\":7,\n    \"name\":\"علیرضا تهرانی\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  },\n    {\n    \"id\":8,\n    \"name\":\"رویا محمدی زاده\",\n    \"sub_title\":\"کارشناس نرم افزار\",\n      \"congratulations_send\":\"ارسال تبریک\",\n    \"avatar\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRormNx-cWkV0Ggs-j5Jnk6g6x7JSyVqRh7uA&usqp=CAU\"\n  }\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/lastActivity",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\n  {\n   \"id\":1,\n   \"image\":\"http://localhost/360/img/svg/8.svg\",\n   \"name\":\"شما 3تماس از دست رفته دارید\",\n   \"date\":\"4ساعت قبل\",\n   \"roundedOne\":\"#fff2f3\"\n    \n  },\n  {\n    \"id\":2,\n    \"image\":\"http://localhost/360/img/svg/4.svg\",\n       \"name\":\"درخواست مرخصی شما تایید شد\",\n   \"date\":\"ا روز قبل\",\n   \"roundedOne\":\"#e5f8f0\"\n  },\n  \n    {\n    \"id\":3,\n    \"image\":\"http://localhost/360/img/svg/7.svg\",\n       \"name\":\"یاداوری جلسه منابع انسانی\",\n   \"date\":\"20خرداد1399\",\n   \"roundedOne\":\"#edf4ff\"\n  },\n  {\n     \"id\":4,\n    \"image\":\"http://localhost/360/img/svg/6.svg\",\n       \"name\":\"شما2ایمیل جدیددارید\",\n   \"date\":\"20خرداد1399\",\n   \"roundedOne\":\"#fff2f3\"\n  }\n  ]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/lastTask",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\"85%\"",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/finalJob",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\n  {\n   \"id\":1,\n   \"borderColor\":\"#5685ee\",\n \n   \"color\":\"#5685ee\",\n   \"roundedColor\":\"#e3eeff\",\n   \"name\":\"دیزاین صفحه داشبورد هاکوپیان 360\",\n   \"title\":\"کارجدید\",\n   \"sub_title\":\"از طرف سعید رحیمی\",\n   \"date\":\"5خرداد98\"\n\n    \n  },\n  {\n    \"id\":2,\n   \"borderColor\":\"#f87171\",\n      \"sub_title\":\"از طرف حسین وفایی\",\n   \"date\":\"2خرداد98\",\n       \"name\":\"تحقیق در مورد بخش میزکار\"\n  },\n  \n    {\n    \"id\":3,\n    \"borderColor\":\"#1bc57d\",\n          \"sub_title\":\"ایجادشده توسط حسین مجیدی\",\n       \"date\":\"1خرداد98\",\n       \"name\":\"دیزاین صفحات بخش جذب واستخدام\"\n\n  },\n  {\n     \"id\":4,\n     \"color\":\"#ff9d55\",\n       \"borderColor\":\"#ff9d55\",\n         \"roundedColor\":\"#fff4de\",\n       \"sub_title\":\"از طرف سعید رحیمی\",\n         \"title\":\"درحال انجام\",\n       \"date\":\"28اردیبهشت 98\",\n       \"name\":\"دیزاین صفحه لاگین و ثبت نام\"\n\n  }\n  ]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/LastProfile",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\r\n\r\n\t{\r\n\t\t\"id\": 1,\r\n\t\t\"name\": \"حسین مجیدی نژاد\",\r\n\t\t\"header\": \"طراح رابط کاربری\",\r\n\t\t\"img\": \"https://s17.picofile.com/file/8419350176/image13.jpg\",\r\n\t\t\"title\":\"تاریخ شروع کار\",\r\n\t\t\"date\":\"30 اردیبهشت99\",\r\n\t\t\"personal\":\"کدپرسنلی\",\r\n\t\t\"fany\":\"واحد سازمانی\",\r\n\t\t\"serial\":9900126,\r\n\t\t\"it\":\"فناوری اطلاعات\",\r\n\t\t\"borderColor\":\"#d0d0d0\"\r\n\t}\r\n\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/lastProject",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\r\n\r\n\t{\r\n\t\t\"id\": 1,\r\n\"Percentage\":\"36%\",\r\n\"name\":\"انجام شده\",\r\n\"title\":\"12%درحال انجام\",\r\n\"PercentageOne\":\"12%\",\r\n\"doneTest\":\"درحال انجام\",\r\n\"imgOne\":\"https://s16.picofile.com/file/8419351092/image1.jpg\",\r\n\"imgTwo\":\"https://s17.picofile.com/file/8419351026/image12.jpg\",\r\n\"imgThree\":\"https://s17.picofile.com/file/8419817268/image3.jpg\"\r\n\t}\r\n\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "dashboard/widgets/lastFood",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "[\r\n\r\n\t{\r\n\t\t\"id\": 1,\r\n\"name\":\"غذای امروز\",\r\n\"backgroundColor\":\"#f2f7ff\",\r\n\"title\":\"باقالی پلو با ماهیچه\",\r\n\"img\":\"http://localhost/360/img/svg/spoon.svg\"\r\n\t}\r\n\r\n\r\n]",
+                "latency": 0,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          },
+          {
+            "uuid": "",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "sample-url",
+            "responses": [
+              {
+                "uuid": "",
+                "body": "\"Server Result!\"",
+                "latency": 2000,
+                "statusCode": 200,
+                "label": "",
+                "headers": [
+                  {
+                    "key": "",
+                    "value": ""
+                  }
+                ],
+                "filePath": "",
+                "sendFileAsBody": false,
+                "rules": [],
+                "rulesOperator": "OR",
+                "disableTemplating": false
+              }
+            ],
+            "enabled": true,
+            "randomResponse": false
+          }
+        ],
+        "proxyMode": false,
+        "proxyHost": "",
+        "https": false,
+        "cors": true,
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+          }
+        ],
+        "proxyReqHeaders": [
+          {
+            "key": "",
+            "value": ""
+          }
+        ],
+        "proxyResHeaders": [
+          {
+            "key": "",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

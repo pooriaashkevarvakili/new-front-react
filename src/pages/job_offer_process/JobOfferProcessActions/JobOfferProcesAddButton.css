@@ -1,0 +1,101 @@
+
+.joboffer-add-button-header {
+    height: 6.9rem;
+    background: rgb(109, 94, 145);
+    background: linear-gradient(
+            90deg,
+            rgba(109, 94, 145, 1) 0%,
+            rgba(163, 97, 152, 1) 35%,
+            rgba(213, 100, 141, 1) 63%,
+            rgba(248, 113, 113, 1) 100%
+    );
+}
+
+.ant-drawer-content-wrapper {
+    width: 67.5rem !important;
+}
+
+.ant-drawer-mask {
+    width: 100vw !important;
+}
+
+.ant-drawer-header {
+    padding-right: 0rem !important;
+    padding-right: 3rem !important;
+    padding-top: 2.3rem !important;
+    text-align: right;
+    height: 6.9rem;
+    background: rgb(109, 94, 145) !important;
+    background: linear-gradient(
+            90deg,
+            rgba(109, 94, 145, 1) 0%,
+            rgba(163, 97, 152, 1) 35%,
+            rgba(213, 100, 141, 1) 63%,
+            rgba(248, 113, 113, 1) 100%
+    ) !important;
+}
+
+.ant-drawer-title {
+    font-size: 2.2rem !important;
+    font-family: Bold !important;
+    color: white !important;
+}
+
+.ant-drawer-close {
+    left: 0 !important;
+    outline: none !important;
+    padding-left: 1.2rem !important;
+    margin-left: 0 !important;
+    left: 0 !important;
+    color: white !important;
+}
+
+.close-drawer {
+    transform: translateY(-50%);
+}
+
+.drawer-header-text {
+    transform: translateY(-50%);
+    font-family: Bold;
+}
+
+.ant-alert {
+    text-align: right !important;
+    font-family: Regular;
+    background-color: #fff2f0 !important;
+    border-color: #ffccc7 !important;
+    
+}
+.bwuiqS
+{
+   /* min-width: 280px;
+    max-width: 280px;*/
+  /*  border: 1px solid #f0f0f0;
+    background: #ededed;*/
+  /*  padding: 10px;*/
+}
+/*.ant-modal-header
+{
+height:100px !important;
+
+}*/
+/*.ant-modal-content
+{
+    height:600px !important;
+}*/
+/*.ant-modal-header
+{margin-bottom: 100px !important;}*/
+/*.ant-modal-body
+{
+   height: auto !important;
+}*/
+@media only screen and (max-width: 768px) {
+    .button_mobile {
+        width: calc(100% - 44px);
+        margin-right: 2.2rem;
+    }
+
+    .ant-drawer-content-wrapper {
+        width: 100% !important;
+    }
+}

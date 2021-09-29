@@ -1,0 +1,198 @@
+@import '~antd/es/style/themes/default.less';
+@import 'assets/fonts/fonts';
+@import 'assets/tailswind.css';
+@import 'complete';
+@back-grey: #f7f7f7;
+@accent-color: #2a2d44;
+@font-face {
+  font-family: 'yek';
+  src: url('assets/fonts/yekan-fonts/eot/yekanwebbold(fanum).eot'),
+    url('assets/fonts/yekan-fonts/eot/yekanweblight(fanum).eot'),
+    url('assets/fonts/yekan-fonts/eot/yekanwebregular(fanum).eot'),
+    url('assets/fonts/yekan-fonts/woff/yekanregular(fanum).woff'),
+    url('assets/fonts/yekan-fonts/woff/yekanwebbold(fanum).woff'),
+    url('assets/fonts/yekan-fonts/woff/yekanweblight(fanum).woff'),
+    url('assets/fonts/yekan-fonts/woff2/yekanwebbold(fanum).woff2'),
+    url('assets/fonts/yekan-fonts/woff2/yekanweblight(fanum).woff2'),
+    url('assets/fonts/yekan-fonts/woff2/yekanwebregular(fanum).woff2');
+}
+
+body {
+  font-family: yek;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+.ant-pro-sider-fixed {
+  left: auto;
+  right: 0;
+}
+
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background-color: @menu-dark-bg;
+}
+
+.ant-pro-sider-logo {
+  background-color: #232639;
+}
+
+[lang='fa'] .ant-table-thead > tr > th {
+  text-align: right;
+}
+
+.ant-table-cell {
+  text-align: right;
+}
+
+.ant-table-column-sorters {
+  flex-flow: row-reverse;
+}
+
+.ant-pagination.mini .ant-pagination-item {
+  height: 32px;
+  line-height: 28px;
+  padding: 0 5px;
+}
+
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector {
+  height: 32px;
+}
+
+.ant-checkbox-inner {
+  border-radius: @border-radius-sm / 4 !important;
+}
+
+[lang='fa'] {
+  .ant-pro-footer-bar {
+    left: 0;
+    right: auto;
+  }
+  .ant-collapse > .ant-collapse-item {
+    border-bottom: none;
+  }
+  .ant-collapse-content {
+    border-top: none !important;
+  }
+  .ant-pagination {
+    padding-left: 18px;
+  }
+
+  .ant-table-wrapper-rtl .ant-table-column-sorter {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+}
+
+.ant-drawer-header {
+  background-image: linear-gradient(to left, #f87171,#d5648d, #a36198 ,#6d5e91);
+  border-radius: 0;
+
+  .ant-drawer-title {
+    color: white;
+    font-weight: bolder;
+  }
+
+  .ant-drawer-close {
+    color: white;
+    top: 6px;
+  }
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 42px;
+}
+
+.ant-drawer-footer {
+  background-color: @back-grey;
+}
+
+.ant-tabs-nav-list {
+  margin-left: 24px;
+}
+
+#logo-login {
+  max-width: 150px;
+}
+
+#login-meta-text {
+  background-color: rgba(0, 0, 0, 0.13);
+  position: absolute;
+  font-size: 1.2em;
+  top: 5vh;
+  left: 5vh;
+  color: white;
+  border-radius: 16px;
+}
+
+.text-accent {
+  color: @accent-color;
+}
+
+#footer-sign {
+  position: absolute;
+  left: 3vh;
+  bottom: 1vh;
+  color: white;
+  opacity: 0.5;
+  text-align: left;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  font-size: 0.8em;
+}
